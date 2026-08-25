@@ -1,0 +1,48 @@
+#include<iostream>
+using namespace std;
+class complex{
+	int real;
+	int img;
+	public: 
+	      complex(){
+	      	real=0;
+	      	img=0;
+		  }
+		  complex(int r1, int i1){
+		  	real =r1;
+		  	img = i1;
+		  	
+		  }
+
+    complex add(complex c){
+    	complex temp;
+    	temp.real = real +c.real;
+    	temp.img = img +c.img;
+    	return temp;
+	}
+void show(){
+	cout<<"The complex number is "<< real<<"+"<<img<<"i"<<endl;
+}
+};
+
+int main(){
+  complex c1;
+    
+    
+    complex c2(4.5, 2.5);
+    complex c3(1.5, 3.5);
+
+    std::cout << "First Complex Number c2: ";
+    c2.show();
+
+    std::cout << "Second Complex Number c3: ";
+    c3.show();
+
+    
+    c1 = c2.add(c3);
+
+    std::cout << "Result of Addition: ";
+    c1.show();
+
+    return 0;
+}
